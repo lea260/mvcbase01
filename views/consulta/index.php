@@ -52,7 +52,6 @@ foreach ($this->alumnos as $row) {
             </tbody>
         </table>
     </div>
-
     <?php require 'views/footer.php';?>
     <!-- importo el javascript-->
     <script src="<?php echo constant('URL'); ?>/public/js/main.js"></script>

@@ -10,9 +10,14 @@ class Consulta_Controller extends Controller
 
     public function render()
     {
-        $alumnos = $this->view->datos = $this->model->get();
+        //
+        //$alumnos = $this->view->datos = $this->model->get();
+        //var_dump($this);
+        $alumnos = $this->model->get();
         $this->view->alumnos = $alumnos;
         $this->view->render('consulta/index');
+        //var_dump($this);
+        //var_dump($this->view);
     }
 
     public function verAlumno($param = null)
