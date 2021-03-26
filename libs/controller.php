@@ -14,11 +14,11 @@ class Controller
     //carga el modelo si existe
     public function loadModel($model)
     {
-        var_dump($this);
+        //var_dump($this);
 
         $url = 'models/' . ucfirst($model) . '_Model.php';
         //$url = 'models/' . ucfirst($model) . '_Model.php';
-        var_dump($url);
+        //var_dump($url);
 
         if (file_exists($url)) {
             require $url;

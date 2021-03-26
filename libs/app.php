@@ -21,15 +21,15 @@ class App
             $archivoController = 'controllers/' . ucfirst($url[0]) . '_Controller.php';
         }
 
-        var_dump($archivoController);
+        //var_dump($archivoController);
         if (file_exists($archivoController)) {
-            echo "existe";
-            var_dump($archivoController);
+
+            //var_dump($archivoController);
             require $archivoController;
 
-            var_dump($archivoController);
+            //var_dump($archivoController);
             $controllerName = ucfirst($url[0]) . '_Controller';
-            var_dump($controllerName);
+            //var_dump($controllerName);
             //$controller = new $url[0]();
             $controller = new $controllerName();
 
@@ -52,6 +52,8 @@ class App
                 }
             } else {
                 // si se llama a un controlador, por defecct
+                //echo "<b>ejecuta el metodo por defecto</b>";
+                //var_dump($controller);
                 $controller->render();
             }
         } else {
