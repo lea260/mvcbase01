@@ -1,6 +1,6 @@
 <?php
 
-class NuevoModel extends Model
+class Nuevo_Model extends Model
 {
 
     public function __construct()

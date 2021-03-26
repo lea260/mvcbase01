@@ -18,13 +18,21 @@ class App
             $controller->loadModel('index');
             return false;
         } else {
-            $archivoController = 'controllers/' . $url[0] . '.php';
+            $archivoController = 'controllers/' . ucfirst($url[0]) . '_Controller.php';
         }
 
+        var_dump($archivoController);
         if (file_exists($archivoController)) {
+            echo "existe";
+            var_dump($archivoController);
             require $archivoController;
 
-            $controller = new $url[0]();
+            var_dump($archivoController);
+            $controllerName = ucfirst($url[0]) . '_Controller';
+            var_dump($controllerName);
+            //$controller = new $url[0]();
+            $controller = new $controllerName();
+
             $controller->loadModel($url[0]);
 
             // Se obtienen el número de param

@@ -1,6 +1,6 @@
 <?php
 
-class Nuevo extends Controller
+class Nuevo_Controller extends Controller
 {
 
     public function __construct()

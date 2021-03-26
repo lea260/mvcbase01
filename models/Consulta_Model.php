@@ -2,7 +2,7 @@
 
 require 'models/alumno.php';
 
-class ConsultaModel extends Model
+class Consulta_Model extends Model
 {
 
     public function __construct()
@@ -25,6 +25,7 @@ class ConsultaModel extends Model
                 $item->apellido = $row['apellido'];
 
                 array_push($items, $item);
+
             }
             return $items;
         } catch (PDOException $e) {

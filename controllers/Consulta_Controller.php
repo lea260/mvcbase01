@@ -1,6 +1,6 @@
 <?php
 
-class Consulta extends Controller
+class Consulta_Controller extends Controller
 {
     public function __construct()
     {

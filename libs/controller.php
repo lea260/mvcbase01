@@ -2,6 +2,8 @@
 
 class Controller
 {
+    public $model;
+    public $view;
 
     public function __construct()
     {
@@ -9,14 +11,19 @@ class Controller
         //echo "<p>Controlador principal</p>";
     }
 
+    //carga el modelo si existe
     public function loadModel($model)
     {
-        $url = 'models/' . $model . 'model.php';
+        var_dump($this);
+
+        $url = 'models/' . ucfirst($model) . '_Model.php';
+        //$url = 'models/' . ucfirst($model) . '_Model.php';
+        var_dump($url);
 
         if (file_exists($url)) {
             require $url;
 
-            $modelName = $model . 'Model';
+            $modelName = ucfirst($model) . '_Model';
             $this->model = new $modelName();
         }
     }
