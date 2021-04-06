@@ -11,11 +11,11 @@ class App
         $url = explode('/', $url);
 
         if (empty($url[0])) {
-            $archivoController = 'controllers/index.php';
+            $archivoController = 'controllers/Index_Controller.php';
             require $archivoController;
             $controller = new Index_Controller();
-            $controller->render();
             $controller->loadModel('index');
+            $controller->render();
             return false;
         } else {
             $archivoController = 'controllers/' . ucfirst($url[0]) . '_Controller.php';
