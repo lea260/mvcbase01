@@ -10,6 +10,7 @@ class Consulta_Controller extends Controller
 
     public function render()
     {
+
         /*ejecuta
         si solo paso http://localhost/controlador
          */
@@ -18,6 +19,9 @@ class Consulta_Controller extends Controller
         //el modelo esta cargado de antes, en APP
         /*controlador_Model*/
         /* this->model tiene el modelo */
+        //
+        //$alumnos = $this->view->datos = $this->model->get();
+        //var_dump($this);
         $alumnos = $this->model->get();
         $this->view->alumnos = $alumnos;
         $this->view->render('consulta/index');

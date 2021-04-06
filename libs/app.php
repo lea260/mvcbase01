@@ -13,7 +13,7 @@ class App
         if (empty($url[0])) {
             $archivoController = 'controllers/index.php';
             require $archivoController;
-            $controller = new Index();
+            $controller = new Index_Controller();
             $controller->render();
             $controller->loadModel('index');
             return false;
